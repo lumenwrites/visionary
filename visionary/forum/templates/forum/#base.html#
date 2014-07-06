@@ -1,0 +1,43 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title> Visionary </title>
+
+  <!-- Zurb Foundation -->
+  <link rel="stylesheet" href="{% static "foundation/css/foundation.css" %}" />
+
+  <link rel="stylesheet" href="{% static "css/main.css" %}" />  
+
+</head>
+
+<body>
+  <header>
+    <div class="row">
+      <div class="large-4 columns">
+        <img src="{% static "img/logo.png" %}" />
+      </div>
+      <div class="large-8 columns">
+        <nav>
+          <ul>
+            <li> Home </li>
+            <li> Forum </li>
+            <li> About </li>            
+          <ul>
+        </nav>
+      </div>      
+    </div>
+  </header>
+
+  {% block content %}
+  {% endblock %}
+
+  <footer>  
+    <div class="row">  
+    </div>
+  </footer>  
+</body>
+</html>

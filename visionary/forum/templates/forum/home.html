@@ -1,0 +1,93 @@
+{% extends "forum/base.html" %}
+{% load staticfiles %}
+
+{% block content %}
+
+<div class="row">  
+
+  <div class="large-3 columns sidebar">
+    <div id="sidebar-bg">
+    </div>    
+    <aside class="sidebar">
+      <h3> Sidebar </h3>
+      <article id="widget_1" class="widget">...</article>
+      <article id="widget_2" class="widget">...</article>
+      <article id="widget_3" class="widget">...</article>
+    </aside> <!-- end .sidebar -->    
+  </div>
+  
+
+  <div class="large-9 columns forum">
+    <main>
+      <!-- <div class="panel" id="main-call-to-action">
+        <div id="cta-header">
+          <h2> Do you have a blog about entrepreneurship, technology, or
+          science? </h2>
+        </div>
+        <div id="join">
+          <input value="username" /><br/>
+          <input value="email" /><br/>
+          <input value="Submit your RSS" /><br/>
+          <button class="button"> Join </button>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+      
+      <div>Top posts: New | Day | Month | Year | All Time |</div> -->
+      
+      <article>
+        <header>
+          <div class="article-header-bg"></div>
+          <img class="expand-arrow" src="{% static "img/expand.png" %}" />
+          <div class="title-description">
+            <div class="article-title"><h1> The Infinite Space Between Words </h1></div>
+            <div class="article-description">
+              12 replies |
+              author:  <span class="author">Jeff Atwood</span> | 
+              category: <span class="category">Main</span> | 
+              21 days ago
+            </div>
+          </div>
+          <div class="rating">
+            <img class="vote-arrow" src="{% static "img/upvote.png" %}" />
+            <span class="rating-points"> 80 </span>
+            <img class="vote-arrow" src="{% static "img/downvote.png" %}" />
+          </div>
+
+          <div class="clearfix"></div>
+          
+        </header>
+        <div class="post-content">
+          <p> I have some serious reservations about the work environment 
+            pictured in Her where everyone's spending all day creepily 
+            whispering to their computers, but there is deep fundamental 
+            truth in that one pivotal scene. That infinite space "between" what 
+            we humans feel as time is where computers spend all their time. I
+            t's an entirely different timescale. </p>
+          <p class="read-more">>>>> read more...</p>
+        </div>
+        <hr />              
+      </article>
+
+      <article>
+        <header>
+          <div class="article-header-bg"></div>
+          <img class="expand-arrow" src="{% static "img/collapsed.png" %}" />
+          <h1> Article title </h1>
+        </header>
+        <hr />              
+      </article>
+
+      <article>
+        <header>
+          <div class="article-header-bg"></div>          
+          <h1> Article title </h1>
+        </header>
+        <hr />              
+      </article>                          
+      
+    </main>
+  </div>
+</div>
+
+{% endblock %}

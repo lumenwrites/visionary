@@ -1,0 +1,7 @@
+*.pyc
+
+design
+setup
+venv
+
+local_settings.py
