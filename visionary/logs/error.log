@@ -1,0 +1,2 @@
+[Wed Sep 03 15:06:28.957460 2014] [authz_core:error] [pid 5286:tid 140254486292224] [client 127.0.0.1:57424] AH01630: client denied by server configuration: /home/ray/projects/Sup/visionary/visionary/visionary.wsgi
+[Wed Sep 03 15:08:15.845105 2014] [authz_core:error] [pid 5459:tid 140566725449472] [client 127.0.0.1:57447] AH01630: client denied by server configuration: /home/ray/projects/Sup/visionary/visionary/visionary.wsgi

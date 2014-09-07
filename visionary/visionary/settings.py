@@ -56,7 +56,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
 
     'forum',
-    'gunicorn',
+    #'gunicorn',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -76,6 +76,20 @@ WSGI_APPLICATION = 'visionary.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/dev/ref/settings/#databases
+DATABASE_NAME= os.environ["DATABASE_NAME"]
+DATABASE_USER= os.environ["DATABASE_USER"]
+DATABASE_PASSWORD= os.environ["DATABASE_PASSWORD"]
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': DATABASE_NAME,
+        'USER': DATABASE_USER,
+        'PASSWORD': DATABASE_PASSWORD,
+        'HOST': 'localhost',
+        'PORT': '',
+    }
+}
 
 # Import from local_settings.py at the end of this file
 
@@ -100,6 +114,7 @@ STATIC_URL = '/static/'
 
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, "static"),
+    #'/home/ray/projects/Sup/visionary/visionary/static/',
  )
 
 try:
@@ -114,8 +129,8 @@ except ImportError:
 
 # Heroku Settings:
 # Parse database configuration from $DATABASE_URL
-import dj_database_url
-DATABASES['default'] =  dj_database_url.config()
+# import dj_database_url
+# DATABASES['default'] =  dj_database_url.config()
 
 # Honor the 'X-Forwarded-Proto' header for request.is_secure()
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
@@ -126,11 +141,21 @@ ALLOWED_HOSTS = ['*']
 # Static asset configuration
 import os
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-STATIC_ROOT = 'staticfiles'
+STATIC_ROOT = 'static_root'
+#STATIC_ROOT = '/home/ray/projects/Sup/visionary/visionary/static/'
+#STATIC_ROOT = ''
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'static'),
+    os.path.join(BASE_DIR, '../static'),
+)
+
+# List of finder classes that know how to find static files in
+# various locations.
+STATICFILES_FINDERS = (
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+    #'django.contrib.staticfiles.finders.DefaultStorageFinder',
 )
 
 
