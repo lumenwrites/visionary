@@ -1,3 +1,5 @@
+@import url('http://fonts.googleapis.com/css?family=Titillium+Web:200');
+@import url("http://fonts.googleapis.com/css?family=Lato:400,700,900,400italic");
 * {
     color: #a2a8ab;
     padding: 0;
@@ -98,6 +100,25 @@ input {
     font-size: 16px;
     margin-top: 4px;
     width: 200px;
+}
+
+
+textarea, option, input[type="text"], input[type="password"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="month"], input[type="week"], input[type="email"], input[type="number"], input[type="search"], input[type="tel"], input[type="time"], input[type="url"], textarea, input[type="file"], input[type="checkbox"], input[type="radio"], select {
+    background: #1a1c1c;
+    border: 0;
+    color: #a2a8ab;
+}
+
+select:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="date"]:focus,
+textarea:focus,
+select:hover
+{
+    background: #1a1c1c;
+    border: 0;
+    color: #a2a8ab;
 }
 
 .button {

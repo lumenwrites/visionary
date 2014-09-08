@@ -75,6 +75,7 @@ WSGI_APPLICATION = 'visionary.wsgi.application'
 
 
 # Database
+# Local postgres:
 # https://docs.djangoproject.com/en/dev/ref/settings/#databases
 DATABASE_NAME= os.environ["DATABASE_NAME"]
 DATABASE_USER= os.environ["DATABASE_USER"]
@@ -90,6 +91,18 @@ DATABASES = {
         'PORT': '',
     }
 }
+
+# Docker postgres:
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'NAME': 'postgres',
+#         'USER': 'postgres',
+#         'PASSWORD': 'postgres',
+#         'HOST': 'localhost',
+#         'PORT': '5432',
+#     }
+# }
 
 # Import from local_settings.py at the end of this file
 

@@ -1,5 +1,4 @@
-# sudo docker build -t visionary_postgres_img .
-# sudo docker run --rm -P --name visionary_postgres_instance visionary_postgres_img
+#
 # example Dockerfile for http://docs.docker.com/examples/postgresql_service/
 #
 
