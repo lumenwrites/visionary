@@ -12,16 +12,17 @@ FROM ubuntu:14.04
 # File Author / Maintainer
 MAINTAINER Ray Alez
 
-ENV REFRESHED_AT 2014-09-0
+ENV REFRESHED_AT 2014-09-09
 
 run apt-get update
 
 # Install necessary tools, nginx
 RUN apt-get install -y emacs wget dialog net-tools
-run apt-get install -y build-essential git libpq-dev
+run apt-get install -y build-essential git 
 run apt-get install -y python3.4 python3.4-dev python-setuptools
 run apt-get install -y python-software-properties
 run apt-get install -y nginx supervisor
+run apt-get install -y libpq-dev
 
 ADD https://github.com/pypa/pip/raw/645180e2714b4ffcf40363a608239e089c9dafab/contrib/get-pip.py /root/get-pip.py
 RUN python3.4 /root/get-pip.py
@@ -33,8 +34,11 @@ run pip3.4 install uwsgi
 # Pull visionary
 run cd
 run git clone https://github.com/raymestalez/visionary.git
+ADD venv /visionary/
 
 run cd /visionary && pip3.4 install -r requirements.txt
+
+
 
 # Configure nginx
 run echo "daemon off;" >> /etc/nginx/nginx.conf

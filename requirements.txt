@@ -1,4 +1,5 @@
--e git://github.com/django/django.git@7fd55c3481a004afb049e15ae3b8c93ce8bf0603#egg=Django-master
+django
+#-e git://github.com/django/django.git@7fd55c3481a004afb049e15ae3b8c93ce8bf0603#egg=Django-master
 astor==0.4
 hy==0.10.0
 psycopg2==2.5.3
