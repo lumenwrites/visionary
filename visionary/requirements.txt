@@ -1,0 +1,7 @@
+-e git://github.com/django/django.git@7fd55c3481a004afb049e15ae3b8c93ce8bf0603#egg=Django-dev
+Pillow==2.5.3
+astor==0.4
+hy==0.10.0
+psycopg2==2.5.3
+rply==0.7.2
+uWSGI==2.0.6

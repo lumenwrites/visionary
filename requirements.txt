@@ -4,3 +4,4 @@ astor==0.4
 hy==0.10.0
 psycopg2==2.5.3
 rply==0.7.2
+pillow
